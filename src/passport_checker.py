@@ -306,7 +306,7 @@ class Checker:
 
 if __name__ == "__main__":
 
-    parser = arg.ArgumentParser(description="42 slot checker")
+    parser = arg.ArgumentParser(description="Passport appointments checker for Paris")
     parser.add_argument(
         "-v", "--verbose", action="store_true", help="include debugging logs"
     )

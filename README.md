@@ -3,13 +3,15 @@
 A tool to check and notify about available appointments for passports/CNI in Paris.  
 It does not book slots for you.
 
+Inspired by : https://github.com/nirae/42_slot_checker
+
 ## Usage
 
 ```
 ./src/passport_checker.py -h
 usage: passport_checker.py [-h] [-c CONFIG] [-v]
 
-42 slot checker
+Passport appointments checker for Paris
 
 optional arguments:
   -h, --help                    show this help message and exit
