@@ -1,0 +1,16 @@
+name: Build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create config file
+        run: cp config_example.yml config.yml
+
+      - name: Build docker image
+        run: docker build . -t checker
+
+      - name: Run the container and check that the program launches successfully
+        run: timeout --preserve-status 15 docker-compose up --exit-code-from passport_checker
