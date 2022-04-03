@@ -1,5 +1,9 @@
 # Passport appointements checker for Paris
 
+![Build](https://github.com/nirae/paris_passport_checker/workflows/Build/badge.svg)
+![Lint](https://github.com/nirae/paris_passport_checker/workflows/Lint/badge.svg)
+![Black](https://github.com/nirae/paris_passport_checker/workflows/Black/badge.svg)
+
 A tool to check and notify about available appointments for passports/CNI in Paris.  
 It does not book slots for you.
 
