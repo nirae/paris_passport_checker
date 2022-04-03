@@ -1,0 +1,18 @@
+from_date: ""
+from_time: "06:00"
+to_date: "30/06/2022"
+to_time: "21:00"
+person_number: 1
+days:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+refresh: 30
+send:
+  telegram:
+    token: '000000000:xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    chat_id: '0000000000'

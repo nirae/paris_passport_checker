@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  passport_checker:
+    build: .
+    image: passport_checker
+    # environment:
+    #   - SLOT_CHECKER_DEBUG=1
+    volumes:
+        - $PWD:/usr/src/app
+    restart: always
