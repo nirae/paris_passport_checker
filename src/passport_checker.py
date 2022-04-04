@@ -107,6 +107,15 @@ class Site:
                 )
                 time.sleep(2)
                 return self.get_appointments(start, end, retries + 1)
+                return self.get_appointments(
+                    from_date=from_date,
+                    from_time=from_time,
+                    to_date=to_date,
+                    to_time=to_time,
+                    person_number=person_number,
+                    days=days,
+                    retries=retries + 1
+                )
             passport_checker_exception(err, "Unable to get appointments")
 
 
