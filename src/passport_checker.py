@@ -78,7 +78,7 @@ class Site:
                 'days_of_week': days,
                 'action_search': 'Rechercher'
             }
-            resp = self.client.post(PARIS_TELESERVICE_URL, data=data, timeout=10)
+            resp = self.client.post(PARIS_TELESERVICE_URL, data=data, timeout=10, follow_redirects=True)
 
             if resp.status_code == 404:
                 log.warning("Get 404")
@@ -106,7 +106,6 @@ class Site:
                     f"Failed attempt #{retries} to get appointments (max {max_retries})"
                 )
                 time.sleep(2)
-                return self.get_appointments(start, end, retries + 1)
                 return self.get_appointments(
                     from_date=from_date,
                     from_time=from_time,
