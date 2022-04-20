@@ -308,9 +308,11 @@ class Checker:
                     log.info(f"Found slot : {slot['location']}, {slot['address']} -> {date}")
                     log.info("send to %s", self.sender.send_option)
                     message = f"""Rendez-vous ! <b>{date}</b>
-                    <b>{slot['location']}</b>
-                    {slot['address']}
-                    https://teleservices.paris.fr/rdvtitres/jsp/site/Portal.jsp?page=appointmentsearch&view=search&category=titres"""
+
+<b>{slot['location']}</b>
+{slot['address']}
+
+https://teleservices.paris.fr/rdvtitres/jsp/site/Portal.jsp?page=appointmentsearch&view=search&category=titres"""
                     self.sender.send(message)
                 time.sleep(self.config.refresh)
 
